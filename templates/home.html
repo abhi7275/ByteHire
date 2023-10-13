@@ -10,17 +10,27 @@
       #banner{
         height: 360px;
         width: 100%;
+        margin-bottom: 16px;
         object-fit: cover;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class=img-fluid" id = "banner" src = "https://career-website.abhi7275.repl.co/static/2.png" >
     <div class ="container">
-    <h1 class="text-center mt-2 mb-4">ByteHire</h1> 
-    <img class=img-fluid" id = "banner" src = "https://career-website.abhi7275.repl.co/static/banner.jpg" >"
+    <!-- <h1 class="text-center mt-2 mb-4">ByteHire</h1>  -->
+   
     <h2 class="text-center mt-2 mb-4">About ByteHire</h2>
+        <div class="row" style = margin-bottom:6px;>
+          <div class="col-md-6">
     <p class="lead"> Welcome to ByteHire, your all-encompassing platform for streamlined job postings across various sectors, including Information Technology, and opportunities for both college graduate freshers and seasoned professionals. ByteHire is here to transform the way you connect with top talent and discover exciting job openings for professionals and fresh graduates alike, making hiring and job hunting easier, faster, and more efficient. </p>
+            </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/3.jpg" style ="height:320px; border-radius:4px;">
+        </div>
     <h2 class="text-center mt-2 mb-4">Job Openings</h2>
+    
       <div>
         {%for job in jobs%}
         {% include 'joblist.html' %}
@@ -28,9 +38,11 @@
         </div>
       
       <div class= "text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
+        
+    <a class="btn btn-primary btn-lg" href="mailto:hello@bytehire@gmail.com?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
         <p class="mt-4">Copyright 2023, ByteHire</p>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
